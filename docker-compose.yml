@@ -14,6 +14,12 @@ services:
     environment:
       - NODE_ENV=development
     tty: true
+    networks:
+      - restapi-todo-nestjs_default
 
 volumes:
   frontend_node_modules:
+
+networks:
+  restapi-todo-nestjs_default:
+    external: true
